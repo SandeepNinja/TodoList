@@ -1,3 +1,4 @@
+import React from "react";
 import Task from "./Task";
 function Tasks(props) {
   const { tasks, handleChangeTitle, handleDeleteTask, handleCompleted } = props;
