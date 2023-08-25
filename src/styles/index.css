@@ -40,12 +40,8 @@ img {
   height: 15px;
   padding-right: 10px;
 }
-/* input {
-  border: none;
-  height: 25px;
-  border-radius: 10px;
-  padding-left: 10px;
-} */
+
+/* Mark the task line-through when checked  */
 input[type="checkbox"]:checked + label {
   text-decoration: line-through;
 }
@@ -55,10 +51,7 @@ input[type="checkbox"]:checked + label {
   float: right;
   padding-right: 10px;
 }
-/* .taskContainer {
-  padding: 10px;
-  border-radius: 10px;
-} */
+/* each task container style  */
 .taskContainer {
   display: inline-block;
   width: 90%;
@@ -70,9 +63,12 @@ input[type="checkbox"]:checked + label {
   box-shadow: 10px 10px 20px yellowgreen;
 }
 
+/* change background when hover over it  */
 .taskContainer:hover {
   background-color: white;
 }
+
+/* Page Scroll bar width */
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -95,23 +91,7 @@ input[type="checkbox"]:checked + label {
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
 }
-/* .inputAddButton {
-  display: inline-block;
-  border-radius: 5px;
-  width: 69%;
-  margin-left: 10px;
-  margin-bottom: -1px;
-  border: 2px solid green;
-  float: left;
-} */
-/* button {
-  display: inline-block;
-  float: right;
-  margin-right: 10px;
-  border: 2px solid green;
-  border-radius: 5px;
-  background-color: #5fdb55;
-} */
+
 button:hover {
   background-color: #55c7db;
 }
@@ -136,6 +116,8 @@ button:hover {
   background-color: green;
   box-shadow: 3px 0px 10px gray;
 }
+
+/* change with screen width  */
 @media screen and (max-width: 460px) {
   .TodolistContainer {
     margin-left: 40px;
