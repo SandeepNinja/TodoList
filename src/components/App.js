@@ -22,6 +22,8 @@ class App extends React.Component {
       tasks: serverTasks,
     });
   };
+  
+  // update title of the task
   handleChangeTitle = async (id, newTitle) => {
     const tasks = this.state.tasks;
     const newTask = tasks.map((task) => {
@@ -41,6 +43,8 @@ class App extends React.Component {
       );
     }
   };
+  
+  //  add a new Task
   handleAddTask = async (newtaskTitle) => {
     // console.log("newTaskTitle :", newtaskTitle);
 
@@ -70,6 +74,8 @@ class App extends React.Component {
       return;
     }
   };
+
+  // Delete a task
   handleDeleteTask = (id) => {
     const tasks = this.state.tasks;
     const newTask = tasks.filter((task) => task.id !== id);
@@ -80,6 +86,8 @@ class App extends React.Component {
       };
     });
   };
+
+  // Toggle the task 
   handleCompleted = async (id, checkBox) => {
     const tasks = this.state.tasks;
     const completed = checkBox;
@@ -103,8 +111,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="TodolistContainer">
+      // contain add new task div
           <AddToTodoList handleAddTask={this.handleAddTask} />
           <span>Tasks</span>
+      // contains task list and some functionality like update and delete
           <Tasks
             tasks={this.state.tasks}
             handleChangeTitle={this.handleChangeTitle}
