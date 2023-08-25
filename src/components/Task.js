@@ -15,12 +15,14 @@ const Task = (props) => {
 
   return (
     <div className="taskContainer" id={`taskContainer-${task.id}`}>
+  // this is to mark task completed or not
       <input
         type="checkbox"
         id={task.id}
         defaultChecked={checkBox}
         onChange={(e) => checkboxToggle(e.target.checked)}
       />
+          // toggle between editable input box and non editable div
       {edit ? (
         <input
           defaultValue={title}
@@ -31,6 +33,7 @@ const Task = (props) => {
         <label htmlFor={task.id}>{title}</label>
       )}
       <div className="rightAction">
+        // togglr between edit and save button
         {edit ? (
           <img
             src="https://cdn0.iconfinder.com/data/icons/leading-international-corporate-website-app-collec/16/Hook-256.png"
@@ -47,6 +50,7 @@ const Task = (props) => {
             onClick={() => handleChangeEdit(true)}
           />
         )}
+              // delete button
         <img
           src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/trash-can-256.png"
           alt="this is a if action delete"
