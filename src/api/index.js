@@ -1,3 +1,4 @@
+// get Tasks from server
 export const getTodos = async () => {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/todos");
@@ -8,6 +9,7 @@ export const getTodos = async () => {
   }
 };
 
+// add new task to server
 export const addTaskToServer = async (body) => {
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/todos", {
@@ -25,6 +27,7 @@ export const addTaskToServer = async (body) => {
   }
 };
 
+// update title of the tasks
 export const updateTask = async (id, title) => {
   try {
     const response = await fetch(
@@ -46,6 +49,8 @@ export const updateTask = async (id, title) => {
     console.log("updatedTaskToServer api error :", error);
   }
 };
+
+// update completed status of the task by toggle checkbox
 export const updateTaskStatus = async (id, completed) => {
   try {
     const response = await fetch(
@@ -68,6 +73,7 @@ export const updateTaskStatus = async (id, completed) => {
   }
 };
 
+// delete a task
 export const deleteTask = (id) => {
   fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
     method: "DELETE",
